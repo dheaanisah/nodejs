@@ -1,9 +1,20 @@
-// (4) buat schema data mahasiswa
+// (4) Buat Schema Mahasiswa
 const mongoose = require('mongoose')
-const mahasiswaSchema = mongoose.Schema({
-    nama : { type: String, requiread: true},
-    alamat : { type: String, requiread: true},
-    createdAt: { type: Date, default: Date,now}
+
+const MahasiswaSchema = mongoose.Schema({
+    // Buat Schema data
+    nama: {
+        type: String,
+        required: true
+    },
+    alamat: {
+        type: String,
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 })
 
-module.exports = mongoose.model('Mahasiswa',mahasiswaSchema)
+module.exports = mongoose.model('Mahasiswa', MahasiswaSchema)
